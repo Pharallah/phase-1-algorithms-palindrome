@@ -1,10 +1,26 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let length = word.length;
+  let firstHalf = word.substring(0, Math.floor(length/2)).toLowerCase();
+  let secondHalf = word.substring(length - Math.floor(length/2)).toLowerCase();
+  let flip = secondHalf.split('').reverse().join('');
+  if (firstHalf === flip) {
+    return true;
+  } else {
+    return false;
+  }
 }
 
 /* 
   Add your pseudocode here
+  Get the length of the string
+  
+  Split the string into two parts:
+  1. The first half
+  2. The second half
+
+  Reverse the second half and compare the two halves
 */
+
 
 /*
   Add written explanation of your solution here
